@@ -1,46 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #header {
+            position: relative;
+            height: 15vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+        }
+
+        #targetdomain {
+            position: relative;
+            text-align: center;
+            font-size: calc(.5em + 2vw);
+            font-weight:500;
+            font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        #content {
+            position: relative;
+            width: 100vw;
+            height: 70vw;
+        }
+
+        #button {
+            position: absolute;
+            width: 100vw;
+            height: 15vh;
+            min-height: 60px;
+            background-color: black;
+            color: white;
+            bottom: 0;
+            
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;                   
+        }
+
+        #button:hover {
+            height: 15.5vh;
+            transition: .4s;
+        }
+
+        #domain {
+            font-size:calc(.5em + 2vw);
+            font-weight:500;
+            font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+            width: 100%;height: 100%; line-height: 0;
+            display: flex;
+            justify-content: center; align-items: center;
+        }
+
+        #domain:hover {
+            font-size:calc(.55em + 2.1vw);
+            transition: .4s;
+        }
+        
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="title">Document</title>
     
-    <script>
-        fetch('file.txt')
-  .then(response => response.text())
-  .then(text => console.log(text))
-    </script>
 </head>
     
 <body>
-    <h1>Did you mean to visit </h1>
-    <embed src="targetdomain.html">
-    <h1>?</h1>
-    
-    <br>
-    
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9994146201267915"
-     crossorigin="anonymous"></script>
-<!-- wikipediaq.org Ad #1 -->
-<div style="position: relative; width: 95vw; height: 50vh;">
-<ins class="adsbygoogle"
-     style="display:block; width: 100%; height: 100%;"
-     data-ad-client="ca-pub-9994146201267915"
-     data-ad-slot="1450303186"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-   </div>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
-    <br>
-    <div style="position: relative; width: 30vw; height: 5vh; margin-left: auto; margin-right: auto; background-color: red; color: white; border-radius: 30px;">
-        <p>Continue to </p>
-        <embed src="domain.html">
+    <div id="header">
+        <p id="targetdomain">It looks like you mistyped the URL.</p>
     </div>
-      
+
+    <div id="content">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9994146201267915"
+        crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle"
+            style="display:block; width: 100%; height: 100%;"
+            data-ad-client="ca-pub-9994146201267915"
+            data-ad-slot="1450303186"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({}); 
+        </script>
+    </div>
+
+    <a id="continueto" style="text-decoration: none;" href="https://www.google.com/">
+        <div id="button">
+            <div id="domain">Continue to Site</div>
+        </div>
+    </a>
+  
 </body>
-    
+
+<script src="load.js"></script>
+
 </html>
