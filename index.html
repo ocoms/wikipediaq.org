@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
     <style>
+        
         body {
             margin: 0;
             overflow-x: hidden;
@@ -18,16 +19,32 @@
 
             display: flex;
             justify-content: center;
-            align-items: center;     
-        }
+            align-items: center;    
+            
+            background-color: black;
+            color: white;
+        }     
 
         #targetdomain {
             position: relative;
             text-align: center;
-            font-size: calc(.55em + 2vw);
+            font-size: calc(.55em + 2.2vw);
             font-weight: 500;
             font-family: 'Poiret One', Arial, Helvetica, sans-serif;
             margin: 0;
+        }
+
+        #contentTitle {
+            position: relative;
+            width: 90vw;
+            height: fit-content;
+            margin: auto;
+
+            font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+            font-size: calc(.55em + 2.2vw);
+            font-weight: 900;
+
+            padding-top: 10vh;
         }
 
         #content {
@@ -38,8 +55,21 @@
 
             font-family: Arial, Helvetica, sans-serif;
             font-size: calc(.55em + 1.5vw);
+        }
 
-            padding-bottom: 30vh;
+        #source, .links {
+            font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            color:black;
+        }
+
+        #source:visited, .links:hover {
+            color: black;
+        }
+
+        #source:hover, .links:hover {
+            color: blue;
         }
 
         #button {
@@ -50,11 +80,12 @@
             background-color: black;
             color: white;
             bottom: 0;
-
+            opacity: .9;
         }
 
         #button:hover {
             height: 15.5vh;
+            opacity: 1;
             transition: .4s;
         }
 
@@ -67,12 +98,28 @@
             line-height: 0;
 
             display: flex;
-            justify-content: center; align-items: center;
+            justify-content: center;
+            align-items: center;
         }
 
         #domain:hover {
-            font-size:calc(.6em + 2.1vw);
+            font-size: calc(.6em + 2.1vw);
             transition: .4s;
+        }
+
+        #footer {
+            position: relative;
+            width: 100vw;
+            height: 15vh;
+            padding-bottom: 15vh;
+            font-weight: 900;
+            font-size: calc(.55em + .7vw);
+
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            column-gap: calc(.6em + .5vw);
+            
         }
         
     </style>
@@ -88,10 +135,22 @@
         <p id="targetdomain">It looks like you mistyped the URL.</p>
     </div>
 
+    <div id="contentTitle">
+    </div>
+
     <div id="content">
        <p id="text">
            <!-- PASTE AD HERE -->
        </p>
+       <a href="https://en.wikipedia.org/" id="source"></a>
+    </div>
+
+    <div id="footer">
+        <a href="about-contact.html" class="links">About</a>
+        <p>•</p>
+        <a href="about-contact.html" class="links">Contact</a>
+        <p>•</p>
+        <a href="privacy.html" class="links">Privacy</a>
     </div>
 
     <a id="continueto" style="text-decoration: none;" href="https://www.google.com/">
